@@ -1,5 +1,8 @@
 
 # Influence-Based Reinforcement Learning for Intrinsically-Motivated Agents
+
+Implementation of the method in the paper: https://openreview.net/pdf?id=bxiDvWZm6zU
+
 ## Installation instructions
 
 Install Python packages
