@@ -118,7 +118,7 @@ class ALITALearner:
         q1, _ = self.qclone(batch[:, :-1], actions_onehot.detach())
 
         
-        targets = target_vals                                                           ###########Or Here
+        targets = target_vals                                                            ###########Or Here
 
         # Td-error
         td_error = (q1 - targets.detach())
@@ -129,7 +129,7 @@ class ALITALearner:
         masked_td_error = td_error * mask
 
         # Normal L2 loss, take mean over actual data
-        qclone_loss = 0.5 * (masked_td_error ** 2).sum() / mask.sum()
+        qclone_loss = 0.5 * (masked_td_error ** 2).sum() / mask.sum()                  ###########
         
         # Optimise
         self.qclone_optimiser.zero_grad()
@@ -183,7 +183,10 @@ class ALITALearner:
                 target_max_qvals = target_mac_out.max(dim=3)[0]
 
 
-            influence=((q1 - target_max_qvals.detach())** 2).sum() / mask.sum()
+
+            q1, _ = self.qclone(batch[:, :-1], actions_onehot.detach())
+
+            influence=((q1 - target_max_qvals.detach())** 2).sum() / mask.sum()                  #################
 
             ####################
             loss = pg_loss - self.args.entropy_coef * entropy_loss / entropy_loss.item() +self.args.inf*influence
