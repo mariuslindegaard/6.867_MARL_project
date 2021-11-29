@@ -1,0 +1,112 @@
+[INFO 16:47:19] pymarl Running command 'my_main'
+[INFO 16:47:19] pymarl Started run with ID "1"
+[DEBUG 16:47:19] pymarl Starting Heartbeat
+[DEBUG 16:47:19] my_main Started
+[WARNING 16:47:19] my_main CUDA flag use_cuda was switched OFF automatically because no CUDA devices are available!
+[INFO 16:47:19] my_main Experiment Parameters:
+[INFO 16:47:19] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'n_rnn',
+    'agent_output_type': 'q',
+    'batch_size': 128,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'heuristic_ai': False,
+                    'heuristic_rest': False,
+                    'map_name': 'corridor',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 653482607,
+                    'state_last_action': True,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gain': 0.01,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'label': 'default_label',
+    'learner': 'alita_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 10000,
+    'lr': 0.001,
+    'mac': 'n_mac',
+    'mixer': 'alita',
+    'mixing_embed_dim': 32,
+    'name': 'alita_env=8_adam_td_lambda',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'per_alpha': 0.6,
+    'per_beta': 0.4,
+    'q_lambda': False,
+    'repeat_id': 1,
+    'return_priority': False,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 653482607,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 10000,
+    'test_nepisode': 32,
+    'use_cuda': False,
+    'use_layer_norm': False,
+    'use_orthogonal': False,
+    'use_per': False,
+    'use_tensorboard': False}
+
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
+[DEBUG 16:47:23] git.cmd Popen(['git', 'version'], cwd=/Users/ammarfayad/Downloads/ALITA-and-others, universal_newlines=False, shell=None, istream=None)
