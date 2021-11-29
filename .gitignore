@@ -1,7 +1,7 @@
-
-__*/
-# PyCharm
+# IDE-ignores
 .idea/
+.vscode/
+.history
 
 
 
