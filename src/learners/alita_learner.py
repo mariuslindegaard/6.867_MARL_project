@@ -7,6 +7,7 @@ from torch.optim import RMSprop, Adam
 from modules.mixers.vdn import VDNMixer
 from modules.mixers.qmix import QMixer
 from modules.mixers.alita import ALITAMixer
+from modules.mpnn import MultiHeadAttention
 from components.action_selectors import categorical_entropy
 from utils.rl_utils import build_td_lambda_targets
 from components.epsilon_schedules import DecayThenFlatSchedule
@@ -28,6 +29,7 @@ class ALITALearner:
         self.target_critic = copy.deepcopy(self.critic)
         self.critic_params = list(self.critic.parameters())
 
+        self.attn = MultiHeadAttention(n_heads=1,input_dim=128)
 
         self.qclone = FMACCritic(scheme, args)
         self.target_qclone = copy.deepcopy(self.critic)
@@ -186,8 +188,10 @@ class ALITALearner:
 
             q1, _ = self.qclone(batch[:, :-1], actions_onehot.detach())
 
-            influence=((q1 - target_max_qvals.detach())** 2).sum() / mask.sum()                  #################
+            #influence=((q1 - target_max_qvals.detach())** 2).sum() / mask.sum()                  
 
+
+            influence=th.dot((q1 - target_max_qvals.detach())** 2,self.attn.attn_weights())
             ####################
             loss = pg_loss - self.args.entropy_coef * entropy_loss / entropy_loss.item() +self.args.inf*influence
 
