@@ -73,14 +73,4 @@ All results will be stored in the `Results` folder and named with `map_name`.
 bash clean.sh
 ```
 
-# Citation
-```
-@article{fayad2021influence,
-  title={Influence-Based Reinforcement Learning for Intrinsically-Motivated Agents},
-  author={Fayad, Ammar and Ibrahim, Majd},
-  journal={arXiv preprint arXiv:2108.12581},
-  year={2021}
-}
-
-```
 
