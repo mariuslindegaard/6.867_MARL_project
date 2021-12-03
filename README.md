@@ -1,7 +1,7 @@
 
-# Influence-Based Reinforcement Learning for Intrinsically-Motivated Agents
+# PROMOTING COORDINATION  VIA ATTENTION-BASED POLICY REGULARIZATION IN MULTI-AGENT TEAMS
 
-Implementation of the method in the paper: https://openreview.net/pdf?id=bxiDvWZm6zU
+Implementation of the method (6.867 Project)
 
 ## Installation instructions
 
